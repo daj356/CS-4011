@@ -1,5 +1,5 @@
 import React from 'react'
-import {Card, Grid, Segment, Image} from 'semantic-ui-react';
+import {Card, Grid, Segment, Image, Modal, Button} from 'semantic-ui-react';
 import GetFilm from './getFilm';
 
 let planet_pics = [
@@ -72,7 +72,7 @@ let planet_pics = [
 export default function Planets({data}) {
     return (
         <>
-            <h1>Planets</h1>
+            <h1>Planets:</h1>
             <Grid columns={2}>
                 {data.map((planets, i) => {
                     return (
@@ -85,7 +85,7 @@ export default function Planets({data}) {
                                         </Card.Header>
                                         <Image src={planet_pics[i]}/>
                                         <Card.Description>
-                                            <Segment color='yellow' size={'big'}>
+                                            <Segment color='black' size={'big'}>
                                                 <strong>Climate</strong>
                                                 <p>{planets.climate}</p>
                                                 <strong>Terrain</strong>
@@ -94,7 +94,21 @@ export default function Planets({data}) {
                                                 <p>{planets.population}</p>
                                                 <strong>Films</strong>
                                                 <p>{planets.films.map(s=> (<><GetFilm data={s}/></>))}</p>
-                                                
+                                                <Modal size='large' trigger={<Button>Show more</Button>}>
+                                                    <Modal.Header>{planets.name}</Modal.Header>
+                                                    <Modal.Description>
+                                                        <strong>Rotation period:</strong>
+                                                        <p>{planets.rotation_period}</p>
+                                                        <strong>Orbital period:</strong>
+                                                        <p>{planets.orbital_period}</p>
+                                                        <strong>Diameter:</strong>
+                                                        <p>{planets.diameter}</p>
+                                                        <strong>Gravity:</strong>
+                                                        <p>{planets.gravity}</p>
+                                                        <strong>Surface water:</strong>
+                                                        <p>{planets.surface_water}</p>
+                                                    </Modal.Description>
+                                                </Modal>
                                             </Segment>
                                         </Card.Description>
                                     </Card.Content>
