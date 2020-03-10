@@ -1,6 +1,6 @@
 import React from 'react'
-import {Card, Grid, Segment, Image} from 'semantic-ui-react';
-
+import {Card, Grid, Segment, Image, Modal, Button} from 'semantic-ui-react';
+import GetPlanet from './getPlanets';
 let movie_pics = [
     "https://i.ytimg.com/vi/sDMPTZ7y1lE/hqdefault.jpg",
     "https://s3.amazonaws.com/s3.timetoast.com/public/uploads/photos/7674047/star-wars-episode-ii-attack-of-the-clones-2.jpg?1478110337",
@@ -16,7 +16,7 @@ let movie_pics = [
 export default function Films({data}) {
     return (
         <>
-            <h1>Films</h1>
+            <h1>Films:</h1>
             <Grid columns={1}>
                 {data.map((films, i) => {
                     return (
@@ -29,7 +29,7 @@ export default function Films({data}) {
                                         </Card.Header>
                                         <Image src={movie_pics[i]} />
                                         <Card.Description>
-                                            <Segment color='yellow' size={'big'}>
+                                            <Segment color='black' size={'big'}>
                                                 <strong>Episode:</strong>
                                                 <p>{films.episode_id}</p>
                                                 <strong>Directed by:</strong>
@@ -38,6 +38,17 @@ export default function Films({data}) {
                                                 <p>{films.release_date}</p>
                                                 <strong>Opening credits:</strong>
                                                 <p>{films.opening_crawl}</p>
+                                                <Modal size='large' trigger={<Button>Show more</Button>}>
+                                                    <Modal.Header>{films.title}</Modal.Header>
+                                                    <Modal.Description>
+                                                        <strong>Producers:</strong>
+                                                        <p>{films.producer}</p>
+                                                        <strong>Planets:</strong>
+                                                        <p>{films.planets.map(s=> (<><GetPlanet data={s}/></>))}</p>
+                                                        <strong>Characters:</strong>
+                                                        <p>{films.characters.map(s=> (<><GetPlanet data={s}/></>))}</p>
+                                                    </Modal.Description>
+                                                </Modal>
                                             </Segment>
                                         </Card.Description>
                                     </Card.Content>

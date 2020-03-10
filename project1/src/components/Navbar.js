@@ -1,11 +1,14 @@
 import React from 'react';
-import {Menu, Container} from 'semantic-ui-react';
+import {Search, Menu, Container} from 'semantic-ui-react';
 import {Link} from 'react-router-dom';
 
 export default function Navbar() {
+    let results = [];
+    let value = '';
     return (
         <Menu inverted>
             <Container>
+                
                 <Link to = '/'>
                     <Menu.Item name="star wars API"/>
                 </Link>
