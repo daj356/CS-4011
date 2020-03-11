@@ -22,11 +22,7 @@ function App() {
   const filter = event => {
     setSearchKey(event.target.value);
     setCharacters(resultsCharacters.filter(data => data.name.includes(event.target.value)));
-<<<<<<< HEAD
     setFilms(resultsFilms.filter(data => data.title.includes(event.target.value)));
-=======
-    //setFilms(resultsFilms.filter(data => data.name.includes(event.target.value)));
->>>>>>> 07b7e345f78da091b6aed5eedd2c19e0ff3d2eeb
     setPlanets(resultsPlanets.filter(data => data.name.includes(event.target.value)));
   };
 
@@ -99,11 +95,7 @@ function App() {
                 <Route exact path = '/characters'>
                   <div className="ui search">
                     <div className="ui right input">
-<<<<<<< HEAD
                       <input className="prompt" type="text" placeholder="Character search..."
-=======
-                      <input className="prompt" type="text" placeholder="Search..."
->>>>>>> 07b7e345f78da091b6aed5eedd2c19e0ff3d2eeb
                       value={searchKey} onChange={filter}/>
                     </div>
                   </div>
@@ -113,11 +105,7 @@ function App() {
                 <Route exact path = '/films'>
                   <div className="ui search">
                     <div className="ui right icon input">
-<<<<<<< HEAD
                       <input className="prompt" type="text" placeholder="Film search..."
-=======
-                      <input className="prompt" type="text" placeholder="Search..."
->>>>>>> 07b7e345f78da091b6aed5eedd2c19e0ff3d2eeb
                       value={searchKey} onChange={filter}/>
                     </div>
                   </div>
@@ -127,11 +115,7 @@ function App() {
                 <Route exact path = '/planets'>
                   <div className="ui search">
                     <div className="ui right icon input">
-<<<<<<< HEAD
                       <input className="prompt" type="text" placeholder="Planet search..."
-=======
-                      <input className="prompt" type="text" placeholder="Search..."
->>>>>>> 07b7e345f78da091b6aed5eedd2c19e0ff3d2eeb
                       value={searchKey} onChange={filter}/>
                     </div>
                   </div>
