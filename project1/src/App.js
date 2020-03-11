@@ -22,7 +22,7 @@ function App() {
   const filter = event => {
     setSearchKey(event.target.value);
     setCharacters(resultsCharacters.filter(data => data.name.includes(event.target.value)));
-    //setFilms(resultsFilms.filter(data => data.name.includes(event.target.value)));
+    setFilms(resultsFilms.filter(data => data.title.includes(event.target.value)));
     setPlanets(resultsPlanets.filter(data => data.name.includes(event.target.value)));
   };
 
@@ -95,7 +95,7 @@ function App() {
                 <Route exact path = '/characters'>
                   <div className="ui search">
                     <div className="ui right input">
-                      <input className="prompt" type="text" placeholder="Search..."
+                      <input className="prompt" type="text" placeholder="Character search..."
                       value={searchKey} onChange={filter}/>
                     </div>
                   </div>
@@ -105,7 +105,7 @@ function App() {
                 <Route exact path = '/films'>
                   <div className="ui search">
                     <div className="ui right icon input">
-                      <input className="prompt" type="text" placeholder="Search..."
+                      <input className="prompt" type="text" placeholder="Film search..."
                       value={searchKey} onChange={filter}/>
                     </div>
                   </div>
@@ -115,7 +115,7 @@ function App() {
                 <Route exact path = '/planets'>
                   <div className="ui search">
                     <div className="ui right icon input">
-                      <input className="prompt" type="text" placeholder="Search..."
+                      <input className="prompt" type="text" placeholder="Planet search..."
                       value={searchKey} onChange={filter}/>
                     </div>
                   </div>
