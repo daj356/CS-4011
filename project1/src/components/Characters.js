@@ -1,3 +1,9 @@
+/*****************************/
+/* Daniel Janis              */
+/* Project 1 - Star Wars API */
+/* Characters.js             */
+/*****************************/
+
 import React from 'react'
 import {Card, Grid, Segment, Modal, Button} from 'semantic-ui-react';
 import GetHomeWorld from './getHomeWorld'

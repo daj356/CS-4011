@@ -1,3 +1,9 @@
+/*****************************/
+/* Daniel Janis              */
+/* Project 1 - Star Wars API */
+/* Home.js                   */
+/*****************************/
+
 import React from 'react'
 import {Image} from 'semantic-ui-react'
 

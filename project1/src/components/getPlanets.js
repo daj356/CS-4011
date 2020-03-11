@@ -1,3 +1,9 @@
+/*****************************/
+/* Daniel Janis              */
+/* Project 1 - Star Wars API */
+/* getPlanets.js             */
+/*****************************/
+
 import React, {useState, useEffect } from 'react';
 
 export default function GetPlanet ({data}) {

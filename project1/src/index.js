@@ -1,3 +1,10 @@
+/*****************************/
+/* Daniel Janis              */
+/* Project 1 - Star Wars API */
+/* index.js                  */
+/*****************************/
+
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';

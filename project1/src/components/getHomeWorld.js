@@ -1,3 +1,9 @@
+/*****************************/
+/* Daniel Janis              */
+/* Project 1 - Star Wars API */
+/* getHomeWorld.js           */
+/*****************************/
+
 import React, {useState, useEffect } from 'react';
 
 export default function GetHomeWorld ({data}) {

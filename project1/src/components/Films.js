@@ -1,3 +1,9 @@
+/*****************************/
+/* Daniel Janis              */
+/* Project 1 - Star Wars API */
+/* Films.js                  */
+/*****************************/
+
 import React from 'react'
 import {Card, Grid, Segment, Image, Modal, Button} from 'semantic-ui-react';
 import GetPlanet from './getPlanets';

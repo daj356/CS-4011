@@ -1,3 +1,9 @@
+/*****************************/
+/* Daniel Janis              */
+/* Project 1 - Star Wars API */
+/* Navbar.js                 */
+/*****************************/
+
 import React from 'react';
 import {Search, Menu, Container} from 'semantic-ui-react';
 import {Link} from 'react-router-dom';

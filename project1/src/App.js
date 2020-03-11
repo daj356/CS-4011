@@ -1,3 +1,14 @@
+/*****************************/
+/* Daniel Janis              */
+/* Project 1 - Star Wars API */
+/* App.js                    ****************************************/
+/* The goal of this project was to create a website that would host */
+/* the data from https://swapi.co/ in a prettier manner. The goal   */
+/* has been achieved to the best of my abilities at the current     */
+/* moment but I will be able to add more as I learn more.           */
+/********************************************************************/
+
+
 import React, {useState, useEffect} from 'react';
 import Navbar from "./components/Navbar";
 import Home from './components/Home';
